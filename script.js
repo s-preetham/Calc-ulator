@@ -39,6 +39,7 @@ let num2;
 let op;
 let valDisp;
 let total = 0;
+let sign;
 
 let display = document.getElementById('display');
 const plus = document.getElementById('plus');
@@ -48,9 +49,13 @@ function addBtn() {
     total = operate(total,'+',display.innerHTML);
     console.log(total);
     display.innerHTML = total;
+    sign = '+';
 }
 function equate() {
-    console.log(total);
+    if (sign==='+'){
+        total = operate(total,'+',display.innerHTML);
+    }
+    sign ='';
     display.innerHTML = total;
 }
 
