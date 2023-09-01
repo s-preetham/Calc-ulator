@@ -15,27 +15,43 @@ function divide(a,b) {
 }
 
 function operate(a,op,b) {
-    console.log(a,op,b);
     if (op==='+') {
-        add(a,b);
+        return add(Number(a),Number(b));
     }
     else if (op==='-') {
-        subtract(a,b);
+        return subtract(Number(a),Number(b));
     }  
     else if (op==='*') {
-        multiply(a,b);
+        return multiply(Number(a),Number(b));
     }
     else if (op==='/') {
-        divide(a,b);
+        return divide(Number(a),Number(b));
     }
 }
+let arr = [];
+function chngDisp(val) {
+    display.innerHTML = val;
+}
+
+
 let num1;
 let num2;
 let op;
+let valDisp;
+let total = 0;
 
-console.log(add(10,5));
-console.log(subtract(10,5));
-console.log(multiply(10,5));
-console.log(divide(10,5));
-console.log(operate(4,'+',5));
+let display = document.getElementById('display');
+const plus = document.getElementById('plus');
+const eqlBtn = document.getElementById('equal');
+
+function addBtn() {
+    total = operate(total,'+',display.innerHTML);
+    console.log(total);
+    display.innerHTML = total;
+}
+function equate() {
+    console.log(total);
+    display.innerHTML = total;
+}
+
 
