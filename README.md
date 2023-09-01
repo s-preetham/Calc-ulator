@@ -1,1 +1,3 @@
-# Calc-ulator
+# Calc-ulator  
+Live Preview:  
+  
